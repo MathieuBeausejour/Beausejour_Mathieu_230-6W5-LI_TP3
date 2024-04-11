@@ -1,0 +1,137 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul {
+  display: flexbox;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  top:0px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+#header {
+  background-color: #333;
+  height:80px;
+  width:100%;
+  font-weight: bold;
+  font-size:50px;
+  text-align: center;
+  position:fixed;
+  top:0px;
+  z-index:7;
+}
+#logo {
+  top:2px;
+  position:relative;
+  padding: 0px 0px;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns:repeat(10,10%);
+  grid-template-rows: repeat(22,100px);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: gray;
+  color:white;
+  padding-top: 80px;
+  }
+
+  .titre {
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end:6;
+    font-size: 50px;
+    text-align: center;
+    background-image: url(images/turquie.jpg) ;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    }
+
+    .contenu1 {
+      grid-column-start: 1;
+      grid-column-end: 11;
+      grid-row-start: 6;
+      grid-row-end:9;
+      text-align: left;
+      background-color: #444;
+      }
+
+    .contenu2 {
+      grid-column-start: 1;
+      grid-column-end: 11;
+      grid-row-start: 9;
+      grid-row-end:12;
+      text-align: left;
+      background-color: #444;
+      }
+
+    .carte {
+      grid-column-start: 1;
+      grid-column-end: 11;
+      grid-row-start: 12;
+      grid-row-end:19;
+      text-align: center;
+      background-color: yellow;
+      z-index: 1;
+      }
+
+      .contenu3 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 19;
+        grid-row-end:22;
+        text-align: center;
+        background-color: green;
+        background-image: url(images/avant-apres.png) ;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        }
+
+      .contenu3-1 {
+        grid-column-start: 5;
+        grid-column-end: 11;
+        grid-row-start: 19;
+        grid-row-end:22;
+        text-align: center;
+        background-color: black;
+        background-image: url(images/seisme.jpg) ;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        }
+
+      .footer {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 22;
+        grid-row-end:23;
+        text-align: left;
+        background-color: #333;
+        }

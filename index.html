@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tremblements de terre</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+     <link rel="stylesheet" href="/switchbasmap/L.switchBasemap.css"/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <script src="/switchbasmap/L.switchBasemap.js"></script>
+
+
+     <link rel="stylesheet" href="/Leaflet.Legend-master/src/leaflet.legend.css">
+     <script src="/Leaflet.Legend-master/src/leaflet.legend.js"></script>
+
+     <script src="leaflet-src.js"></script>
+     <script type="text/javascript" src="../dist/leaflet.ajax.js"></script>
+
+     <script src="Trench.js"></script>
+     <script src="PB2002_plates.js"></script>
+    
+</head>
+<body>
+    <header id="header">
+        <ul>
+            <li><a href = "https://www.cegeplimoilou.ca/" id = "logo"><img  src="images/cegep.png" height="74"></a></li>
+            <li><a class="active" href="#titre">Accueil</a></li>
+            <li><a href="#carte">Carte</a></li>
+            <li><a href="#causes">Causes</a></li>
+            <li><a href="#images">images</a></li>
+        </ul>
+    </header>
+    <div class = "grille">
+        <div class = "titre" id = "titre">Les tremblements de terre</div>
+        <div class = "contenu1" id = "conséquences" >
+            <p style="font-size: 30px;">Les conséquences des tremblements de terre</p>
+            <br>
+            <p>Les séismes peuvent avoir des conséquences sur la vie humaine, l'économie et l'environnement.
+
+                Le séisme est le risque naturel majeur le plus meurtrier, tant par ses effets directs (chutes d'objets, effondrements de bâtiments) que par les phénomènes induits (mouvements de terrain, tsunamis, etc.). En outre, ces phénomènes peuvent conduire à la rupture de réseaux de gaz, source d’incendies ou d’explosions, provoquant un nombre important de victimes indirectes. Outre les victimes possibles, un très grand nombre de personnes peuvent se retrouver, suite à un séisme, sans abri et déplacées.
+                Un séisme et ses éventuels phénomènes induits peuvent engendrer la destruction ou l'endommagement des habitations, des outils de production (usines, bâtiments des entreprises, etc.), des ouvrages (ponts, routes, voies ferrées, etc.), des réseaux d’eau, d’énergie ou de télécommunications, causant des pertes matérielles directes et des perturbations importantes de l’activité économique.</p>
+            <br>
+            <p>Par ailleurs, les conséquences d’un séisme peuvent être à l’origine des pollutions importantes des milieux naturels liées à la rupture ou la défaillance d’équipements industriels. Dans le cas des séismes les plus forts, des modifications du paysage ont pu être observées. Ces modifications sont généralement modérées.</p>
+        </div>
+        <div class = "contenu2" id = "causes" >
+            <p style="font-size: 30px;">Les causes des tremblements de terre</p>
+            <br>
+            <p>La croûte terrestre est constituée de sept grandes plaques lithosphériques, ainsi que d’un grand nombre de petites plaques. Elles se rapprochent les unes des autres (convergentes), s’éloignent (divergentes) ou se tangentent (transformantes).
+
+                Les tremblements de terre se forment lors d’une libération soudaine de contrainte le long des failles de la croûte terrestre. En raison du mouvement permanent des plaques tectoniques, les contraintes s’accumulent dans les couches rocheuses de chaque côté d’une faille. Lorsqu’elles deviennent trop importantes, elles se déchargent par un brusque mouvement soudain. L’énergie sismique ainsi libérée s’étend sous forme d’ondes à travers la terre et le long de la surface, et provoque les secousses que l’on ressent comme un tremblement de terre.</p>
+            <br>
+            <p style="font-size: 20px;">Tectonique des plaques</p>
+            <br>
+            <p>Les tremblements de terre provoqués par la tectonique des plaques sont qualifiés de séismes tectoniques. Ils constituent la majorité des tremblements de terre dans le monde, et surviennent la plupart du temps sur les limites des plaques tectoniques.</p>
+            <br>
+            <p style="font-size: 20px;">Séismes induits</p>
+            <br>
+            <p>Les séismes induits sont déclenchés par les activités humaines, notamment par les constructions de tunnels, la mise en eau des lacs de retenue et les projets de géothermie ou de fracturation.</p>
+        </div>
+        <div class = "carte" id="carte">
+            <script src="script.js"></script>
+        </div>
+        <div class = "contenu3" id = "images" ></div>
+        <div class = "contenu3-1" ></div>
+        <div class = "footer" >Créé par: Mathieu Beauséjour</div>
+    </div>
+</body>
+
+</html>

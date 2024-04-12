@@ -49,89 +49,49 @@ li a:hover {
   padding: 0px 0px;
 }
 
-.grille {
-  display: grid;
-  grid-template-columns:repeat(10,10%);
-  grid-template-rows: repeat(22,100px);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  background-color: gray;
+.container-fluid{
+  padding-top: 100px;
+  background-color: #444;
+  color: white;
+  text-align: center;
+}
+.col,.col-8{
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+}
+
+#Titre{
   color:white;
-  padding-top: 80px;
-  }
+  font-weight: 700;
+  height: 700px;
+  font-size: 50px;
+  text-align: center;
+  background-image: url(images/Vieux-Quebec_Haute-Ville_Nuit.jpg) ;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
 
-  .titre {
-    grid-column-start: 1;
-    grid-column-end: 11;
-    grid-row-start: 1;
-    grid-row-end:6;
-    font-size: 50px;
-    text-align: center;
-    background-image: url(images/turquie.jpg) ;
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    }
+#ref:hover, h1:hover, a:hover {
+  background-color: #111;
+  text-decoration: none;
+}
 
-    .contenu1 {
-      grid-column-start: 1;
-      grid-column-end: 11;
-      grid-row-start: 6;
-      grid-row-end:9;
-      text-align: left;
-      background-color: #444;
-      }
+#ref{
+  color:white;
+  text-decoration: none;
+}
 
-    .contenu2 {
-      grid-column-start: 1;
-      grid-column-end: 11;
-      grid-row-start: 9;
-      grid-row-end:12;
-      text-align: left;
-      background-color: #444;
-      }
+#contenu{
+  height: 100px;
+  color:white;
+  text-decoration: none;
+  font-size: large;
+  align-content: center;
+}
 
-    .carte {
-      grid-column-start: 1;
-      grid-column-end: 11;
-      grid-row-start: 12;
-      grid-row-end:19;
-      text-align: center;
-      background-color: yellow;
-      z-index: 1;
-      }
-
-      .contenu3 {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 19;
-        grid-row-end:22;
-        text-align: center;
-        background-color: green;
-        background-image: url(images/avant-apres.png) ;
-        background-size:cover;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        }
-
-      .contenu3-1 {
-        grid-column-start: 5;
-        grid-column-end: 11;
-        grid-row-start: 19;
-        grid-row-end:22;
-        text-align: center;
-        background-color: black;
-        background-image: url(images/seisme.jpg) ;
-        background-size:cover;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        }
-
-      .footer {
-        grid-column-start: 1;
-        grid-column-end: 11;
-        grid-row-start: 22;
-        grid-row-end:23;
-        text-align: left;
-        background-color: #333;
-        }
+#carte{
+  z-index: 1;
+  height: 800px;
+}

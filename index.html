@@ -24,16 +24,18 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
      <script src="Lieux_historiques.js"></script>
+     <script src="vdq-arrondissement.js"></script>
+     <script src="vdq-quartier.js"></script>
     
 </head>
 <body>
     <header id="header">
         <ul>
             <li><a href = "https://www.cegeplimoilou.ca/" id = "logo"><img  src="images/cegep.png" height="74"></a></li>
-            <li><a class="active" href="#titre">Accueil</a></li>
+            <li><a class="active" href="#Titre">Accueil</a></li>
+            <li><a href="#contenu">Présentation du projet</a></li>
             <li><a href="#carte">Carte</a></li>
-            <li><a href="#causes">Causes</a></li>
-            <li><a href="#images">Images</a></li>
+            <li><a href="#Texte">Texte</a></li>
         </ul>
     </header>
     <div class="container-fluid"> 
@@ -41,11 +43,51 @@
             <div class="col" id = "Titre">Les lieux historiques de la ville de Québec</div>
         </div>
         <div class="row">
+            <div class="col">
+                <p id = "Presentation">Présentation du projet</p>
+                <p id = "PresentationTexte">Ce site web est fait dans le cadre d'un cours de cartographie web, il a pour but de montrer la production d'un site web, ainsi qu'une carte web fait avec leaflet qui importe des données géograpĥiques et montre l'utilisation de plugins.</p>
+                <p id = "PresentationTexte">La carte si-dessous plusieurs sites historiques  de la ville de Québec et sa région, dans le but de faitre connaitre l'attrait touristiques et historiques de la région de Québec.</p>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-8" id = "contenu"><a id = "ref" href="evaluation.html">Évaluations des lieux</a></div>
-            <div class="col" id = "contenu"><a id = "ref" href="recomamndation.html">Recommandation du jour</a></div>
+            <div class="col" id = "contenu"><a id = "ref" href="recommandation.html">Recommandation du jour</a></div>
         </div>
         <div class="row">
             <div class="col" id = "carte"><script src="script.js"></script></div>
+        </div>
+        <div class="row">
+            <div class="col-6" id = "Photos"><img id="image" src="images/1re_avenue_Charlesbourg.jpg" style="width:80%"></div>
+            <div class="col" id = "Texte">
+                <br>
+                <p>Fondée en 1608 par l’explorateur Samuel de Champlain, Québec est une ville unique en Amérique du Nord avec ses fortifications, ses rues étroites et ses 400 ans d’architecture. Cinq fois assiégée, elle est finalement conquise par les Britanniques en 1759. D’abord capitale de la Nouvelle-France, puis de l’Amérique du Nord britannique, elle est aujourd’hui le cœur de la culture française sur le continent.</p>
+                <br>
+                <p>L'histoire de Québec est celle de la ville la plus ancienne du Canada. Située à la confluence du fleuve Saint-Laurent et de la rivière Saint-Charles, elle est fréquentée par les Premières Nations bien avant l’arrivée des colonisateurs européens. Elle a déjà été la capitale canadienne avant de devenir celle de la province de Québec. Elle est connue pour sa topographie particulière avec le cap Diamant qui surplombe la basse-ville. Ville d’histoire, son patrimoine est classé et protégé par différents paliers de gouvernement et organismes internationaux</p>
+                <br>
+                <p>Le site de la ville de Québec, il y a 14 000 ans, était sous une calotte glaciaire. 2 000 ans plus tard, ce même site se retrouva submergé par l’eau, à la suite de la fonte des glaciers, qui formera la mer de Champlain, devenue avec le temps un simple fleuve. Seule la colline de Québec était visible à ce moment-là. Ainsi, 6 000 ans plus tard, l’emplacement de Québec se montre fièrement.</p>
+                <br>
+                <p>La richesse historique et patrimoniale du Vieux-Québec est aujourd’hui reconnue bien au-delà de ses frontières. Le 3 décembre 1985, l’UNESCO inscrivait l’arrondissement historique du Vieux-Québec sur sa prestigieuse Liste du patrimoine mondial. Québec a été la première agglomération urbaine située au nord du Mexique à recevoir cet honneur.
+
+                    En 2015, pour commémorer le 30e anniversaire, un médaillon de bronze de 3 mètres de diamètre est installé sur le parvis de l’hôtel de ville.</p>
+            </div>
+            <div class="col-1" id = "contenu" ><a id = "ref" href="https://experience.arcgis.com/experience/4c7dd0e38e8745c9b646f4e34f8e19fe/" > Liens vers application web </a> </div>
+            <script>
+                var imageSources = ["images/Chateau_Frontenac.jpg", "images/petit_champlain.jpg", "images/mur_des_fortifications.jpg", "images/2014-08-28-Quebec-City-skyline-from-Île-dOrléans.jpg","images/1re_avenue_Charlesbourg.jpg"]
+                var index = 0;
+                setInterval (function(){
+                    if (index === imageSources.length) {
+                        index = 0;
+                    }
+                    document.getElementById("image").src = imageSources[index];
+                    index++;
+                } , 5000);
+    
+             </script>
+        </div>
+        <div class="row">
+            <div class="col">
+                Site web fait par: Mathieu Beauséjour
+            </div>
         </div>
     </div>
     

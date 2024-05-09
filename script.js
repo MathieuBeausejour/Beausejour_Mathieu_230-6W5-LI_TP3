@@ -40,7 +40,7 @@ new L.basemapsSwitcher([
    
    let marker = L.marker(latlng, { icon: myIcon });
    
-   // Ajouter un popup avec le nom de l'entité GeoJSON
+   // Ajoute un popup avec le nom et la description des lieux
    let popupContent = "<b>" + feature.properties.Nom + "</b><br>" + feature.properties.Description;
    marker.bindPopup(popupContent);
    
@@ -51,26 +51,61 @@ new L.basemapsSwitcher([
    pointToLayer: createCustomIcon
  };
  
- L.geoJSON(geojsonFeature, myLayerOptions).addTo(map);
+ var test = L.geoJSON(geojsonFeature, myLayerOptions).addTo(map);
 
+var quartiers = new L.GeoJSON(quartier, {
+  style: function (feature) {
+    return {
+      fillColor: 'green', // Couleur de remplissage
+      fillOpacity: 0, // Opacité de remplissage
+      color:'orange',
+      weight: 2 // Désactive le contour
+    };
+  }
+}).addTo(map);
+
+
+ var arrondissement = new L.GeoJSON(arron, {
+  style: function (feature) {
+    return {
+      fillColor: 'blue', // Couleur de remplissage
+      fillOpacity: 0, // Opacité de remplissage
+      weight: 2 // Désactive le contour
+    };
+  }
+}).addTo(map);
 
 const legend = L.control.Legend({
   position: "bottomright",
   collapsed: false,
   symbolWidth: 25,
-  symbolHeight:25,
+  symbolHeight: 25,
   opacity: 0.8,
   column: 1,
   legends: [{
-      label: "Lieux historiques",
-      type: "image",
-      url: "images/lieu.png",
+    label: "  Lieux historiques",
+    type: "image",
+    url: "images/lieu.png",
+  },
+  {
+    label: "-   Quartiers de la ville de Québec",
+    type: "polyline",
+    weight: 2,
+    color: "orange"
+  },
+  {
+    label: "-   Arrondissements de la ville de Québec",
+    type: "polyline",
+    weight: 2,
+    color: "blue"
   }]
 })
 .addTo(map);
 
 var overlays = {
-  "Lieux historiques": geojsonFeature
+  "Lieux historiques": test,
+  "Quartiers de la ville de Québec":quartiers,
+  "Arrondissement de la ville de Québec":arrondissement
 };
 
 L.control.layers(overlays).addTo(map);
